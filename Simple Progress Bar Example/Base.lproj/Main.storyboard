@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Progress_Bar_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha5-I1-EeJ" customClass="ProgressBarView" customModule="Simple_Progress_Bar_Example" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="325.5" width="300" height="16"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Iqi-MR-obg"/>
+                                    <constraint firstAttribute="height" constant="16" id="vJf-mE-sq1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqk-Rd-GhG">
+                                <rect key="frame" x="37.5" y="349.5" width="30" height="30"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="subAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ug6-Kt-cIq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAP-Cp-FMU">
+                                <rect key="frame" x="307.5" y="349.5" width="30" height="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxo-M1-N4U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQD-16-aoI">
+                                <rect key="frame" x="37" y="387" width="101" height="30"/>
+                                <state key="normal" title="Show Gradient"/>
+                                <connections>
+                                    <action selector="btnChangeGradientAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ac6-g9-7aW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm6-Po-fdT">
+                                <rect key="frame" x="243.5" y="387" width="94" height="30"/>
+                                <state key="normal" title="Change Color"/>
+                                <connections>
+                                    <action selector="btnChangeColorWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATK-Pu-g2B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dm6-Po-fdT" firstAttribute="top" secondItem="bAP-Cp-FMU" secondAttribute="bottom" constant="8" id="0ic-7A-eUR"/>
+                            <constraint firstItem="Dm6-Po-fdT" firstAttribute="trailing" secondItem="bAP-Cp-FMU" secondAttribute="trailing" id="4KF-Mt-nDb"/>
+                            <constraint firstItem="EQD-16-aoI" firstAttribute="top" secondItem="Uqk-Rd-GhG" secondAttribute="bottom" constant="8" id="8C4-76-KvQ"/>
+                            <constraint firstItem="EQD-16-aoI" firstAttribute="leading" secondItem="Uqk-Rd-GhG" secondAttribute="leading" id="Bzf-M5-nIc"/>
+                            <constraint firstItem="bAP-Cp-FMU" firstAttribute="trailing" secondItem="ha5-I1-EeJ" secondAttribute="trailing" id="GoF-NA-0EL"/>
+                            <constraint firstItem="Uqk-Rd-GhG" firstAttribute="top" secondItem="ha5-I1-EeJ" secondAttribute="bottom" constant="8" id="N2g-X9-bMb"/>
+                            <constraint firstItem="ha5-I1-EeJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dCB-Z0-b8W"/>
+                            <constraint firstItem="bAP-Cp-FMU" firstAttribute="top" secondItem="ha5-I1-EeJ" secondAttribute="bottom" constant="8" id="mp9-6i-UMk"/>
+                            <constraint firstItem="Uqk-Rd-GhG" firstAttribute="leading" secondItem="ha5-I1-EeJ" secondAttribute="leading" id="oMj-w2-gvx"/>
+                            <constraint firstItem="ha5-I1-EeJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ogW-uZ-W4s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="ha5-I1-EeJ" id="xmJ-qS-ZO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
